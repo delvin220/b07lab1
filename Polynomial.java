@@ -224,6 +224,12 @@ public class Polynomial {
                         myObj.write('+');
                     }
                 }
+                else if (exponents[i] == 1) {
+                    myObj.write(String.valueOf(coefficients[i]) + 'x');
+                    if (i != exponents.length - 1 && coefficients[i+1] > 0) {
+                        myObj.write('+');
+                    }
+                }
                 else {
                     myObj.write(String.valueOf(coefficients[i]) + 'x' + String.valueOf(exponents[i]));
                     if (i != exponents.length - 1 && coefficients[i+1] > 0) {
